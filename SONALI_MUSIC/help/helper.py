@@ -1,37 +1,42 @@
-# MADE BY - ALPHA BABY
+import config
 
-class Helper(object):
-    HELP_M = '''```
+
+class HelperMeta(type):
+    @property
+    def HELP_M(cls):
+        return '''```
 ❖ ᴄʜσσsє ᴛʜє ᴄᴧᴛєɢσʀʏ ғσʀ ᴡʜɪᴄʜ ʏσυ ᴡᴧηηᴧ ɢєᴛ ʜєʟᴩ```
 **ᴧsᴋ ʏσυʀ ᴅσυʙᴛs ᴧᴛ sυᴘᴘσʀᴛ ᴄʜᴧᴛ ᴧʟʟ ᴄσϻϻᴧηᴅs ᴄᴧη ʙє υsєᴅ ᴡɪᴛʜ : /**
 '''
 
-    HELP_B = '''```
+    @property
+    def HELP_B(cls):
+        return '''```
 ❖ ᴄʜσσsє ᴛʜє ᴄᴧᴛєɢσʀʏ ғσʀ ᴡʜɪᴄʜ ʏσυ ᴡᴧηηᴧ ɢєᴛ ʜєʟᴩ```
 **ᴧsᴋ ʏσυʀ ᴅσυʙᴛs ᴧᴛ sυᴘᴘσʀᴛ ᴄʜᴧᴛ ᴧʟʟ ᴄσϻϻᴧηᴅs ᴄᴧη ʙє υsєᴅ ᴡɪᴛʜ : /**
 '''
 
-
-    HELP_Sona = '''```
+    @property
+    def HELP_Sona(cls):
+        return '''```
 ❖ ʜєʟᴘ ϻᴧɪη ϻєηυ```
 **❖ ᴄʜσσsє ᴛʜє ᴄᴧᴛєɢσʀʏ ғσʀ ᴡʜɪᴄʜ ʏσυ ᴡᴧηηᴧ ɢєᴛ ʜєʟᴩ**
 '''
 
-#------------------------------------------------------------------------------------------------------------------------
-# TOOL | TOOL | TOOL | TOOL | TOOL | TOOL | TOOL | TOOL | TOOL | TOOL | TOOL | TOOL | TOOL | TOOL | TOOL | TOOL | TOOL |
-#------------------------------------------------------------------------------------------------------------------------
-
-    HELP_01 = '''```
+    @property
+    def HELP_01(cls):
+        return f'''```
 ❖ ᴄʜᴧᴛɢᴘᴛ ᴄσϻϻᴧηᴅꜱ ❖```
 **❖ ᴧɪ|ᴄʜᴧᴛɢᴘᴛ ᴄσϻϻᴧηᴅs
 
 ❍ /ask [ǫυєʀʏ] : sєᴧʀᴄʜ ᴛʜє ᴧηʏ ᴛʏᴘє ǫυєsᴛɪση
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-    HELP_02 = '''```
+    @property
+    def HELP_02(cls):
+        return f'''```
 ❖ sєᴧʀᴄʜ ᴄσϻϻᴧηᴅꜱ ❖```
 **❍ /google [ǫυєʀʏ] : sєᴧʀᴄʜ ᴛʜє ɢσσɢʟє ғσʀ ᴛʜє ɢɪᴠєη ǫυєʀʏ
 ❍ /waifu [ǫυєʀʏ] : sєᴧʀᴄʜ ʀᴀɴᴅᴏᴍ ᴡᴧɪғᴜ ғσʀ ᴛʜє ɢɪᴠєη ǫυєʀʏ
@@ -42,10 +47,12 @@ class Helper(object):
 ```
 ❖ єxᴧϻᴘʟє : /google ʜɪɴᴅɪ sᴏɴɢs```
 
-**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-    HELP_03 = '''```
+    @property
+    def HELP_03(cls):
+        return f'''```
 ❖ ᴡʜɪsᴘᴇʀ ❖```
 **❖ sᴇɴᴅ ᴡʜɪsᴘᴇʀ ᴍᴇssᴀɢᴇ ❖**
 
@@ -57,11 +64,12 @@ class Helper(object):
 
 **❍ /tts : [ᴛєxᴛ]
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II) **
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL}) **
 '''
 
-
-    HELP_04 = '''```
+    @property
+    def HELP_04(cls):
+        return f'''```
 ❖ ɪηꜰσ ᴄσϻϻᴧηᴅꜱ ❖```
 **❍ /id : ɢєᴛ ᴛʜє ᴄυʀʀєηᴛ ɢʀσυᴘ ɪᴅ. ɪғ υsєᴅ ʙʏ ʀєᴘʟʏɪηɢ ᴛσ ᴧ ϻєssᴧɢє, ɢєᴛs ᴛʜᴧᴛ υsєʀ's ɪᴅ
 ❍ /info : ɢєᴛ ɪηғσʀϻᴧᴛɪση ᴧʙσυᴛ ᴧ υsєʀ.
@@ -70,32 +78,35 @@ class Helper(object):
 ❍ /groupinfo : ɢєᴛ ʏσᴜʀ ɢʀσᴜᴘ ɪηғσ `ᴇx :- /groupinfo ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ`
 ❍ /status : ɢєᴛ ʏσᴜʀ ɢʀσᴜᴘ sᴛᴧᴛᴜs
 
-𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-
-    HELP_05 = '''```
+    @property
+    def HELP_05(cls):
+        return f'''```
 ❖ ғσηᴛ ❖```
 **ʙʏ υsɪηɢ ᴛʜɪs ϻσᴅυʟє ʏσυ ᴄᴧη ᴄʜᴧηɢє ғσηᴛs σғ ᴧηʏ ᴛєxᴛ!
 
 ❍ /font [ᴛєxᴛ]**
 ```
-❖ єxᴧϻᴘʟє : /font  Baby```
+❖ єxᴧϻᴘʟє : /font Baby```
 
-**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II) **
+**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL}) **
 '''
 
-    HELP_06 = '''```
+    @property
+    def HELP_06(cls):
+        return f'''```
 ❖ ϻᴧᴛʜ ǫυᴧᴛɪσηs sσʟᴠє ❖```
 
 **❍ /math ➠ sσʟᴠєs ϻᴧᴛʜєϻᴧᴛɪᴄᴧʟ ᴘʀσʙʟєϻs ᴧηᴅ ǫυᴧᴛɪσηs
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-    HELP_07 = '''```
+    @property
+    def HELP_07(cls):
+        return f'''```
 ❖ ᴛᴧɢ ᴄσϻϻᴧηᴅꜱ ❖```
 **✿ ᴄʜσσsє ᴛᴧɢ ɪη ʏσυʀ ᴄʜᴧᴛ ✿
 
@@ -106,36 +117,36 @@ class Helper(object):
 ❍ /shayari ➠ ʀᴧηᴅσϻ sʜᴧʏᴧʀɪ ᴛᴧɢ 
 ❍ /shstop ⇴ sᴛσᴘ ᴛᴧɢ
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-    HELP_08 = '''```
+    @property
+    def HELP_08(cls):
+        return f'''```
 ❖ ᴄᴏᴜᴘʟᴇs ᴄσϻϻᴧηᴅꜱ ❖```
 **❍ /couples ➠ ᴜsє ᴛʜɪs ᴄσϻϻᴧηᴅ ᴧηᴅ sєє ɢʀσᴜᴘs ᴄσᴜᴘʟєs.
 ❍ /wish ➠ ᴜsє ᴛʜɪs ᴄσϻϻᴧηᴅ ᴧηᴅ sєє ɢʀσᴜᴘs ᴄσᴜᴘʟєs.
 ❍ /cute ➠ ᴄʜєᴄᴋ ʏσυʀ ᴄυᴛєηєss.
 ❍ /love ➠ ᴧᴅᴅ ᴛᴡᴏ ηᴧϻєs ᴧηᴅ sєє ʟσᴠᴇ ᴘσssɪʙɪʟɪᴛʏ !! `ʟɪᴋᴇ ʀᴧᴊ + priya.`
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-
-
-
-    HELP_09 = '''```
+    @property
+    def HELP_09(cls):
+        return f'''```
 ❖ ʜᴧsᴛᴧɢ ❖```
 
 **ʜєʀє ɪs ᴛʜє ʜєʟᴘ ғσʀ ᴛʜє ʜᴧsᴛᴧɢ ϻσᴅυʟє:
 
 ❍ /hastag : [ᴛєxᴛ]
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-    HELP_10 = '''```
+    @property
+    def HELP_10(cls):
+        return f'''```
 ❖ sᴛɪᴄᴋєʀs ᴄσϻϻᴧηᴅꜱ ❖```
 **❍ /packkang ➠ ᴄʀєᴧᴛєs ᴧ ᴘᴧᴄᴋ σғ sᴛɪᴄᴋєʀs ғʀσϻ ᴧ σᴛʜєʀ ᴘᴧᴄᴋ
 ❍ /stickerid ➠ ɢєᴛs ᴛʜє sᴛɪᴄᴋєʀ ɪᴅ σғ ᴧ sᴛɪᴄᴋєʀ
@@ -143,11 +154,12 @@ class Helper(object):
 ❍ /kang ➠ ʀєᴘʟʏ ᴧηʏ sᴛɪᴄᴋєʀ & ᴄʀєᴀᴛє ʏσᴜʀ sᴛɪᴄᴋєʀ ᴘᴧᴄᴋ
 ❍ /st ➠ ғɪηᴅ ᴏʀɪɢɪηᴧʟ sᴛɪᴄᴋєʀ.
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-    HELP_11 = '''```
+    @property
+    def HELP_11(cls):
+        return f'''```
 ❖ ғυη ❖```
 **ʜєʀє ɪs ᴛʜє ʜєʟᴘ ғσʀ ᴛʜє ғυη ϻσᴅυʟє:
 
@@ -161,22 +173,24 @@ class Helper(object):
 ❍ /truth [sєηᴅs ᴧ ʀᴧηᴅσϻ ᴛʀυᴛʜ sᴛʀɪηɢ]
 ❍ /dare : [sєηᴅs ᴧ ʀᴧηᴅσϻ ᴅᴧʀє sᴛʀɪηɢ]
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-    HELP_12 = '''```
+    @property
+    def HELP_12(cls):
+        return f'''```
 ❖ ǫυσᴛʟʏ ❖```
 **ʜєʀє ɪs ᴛʜє ʜєʟᴘ ғσʀ ᴛʜє ǫυσᴛʟʏ ϻσᴅυʟє:
 
 ❍ /q : ᴄʀєᴧᴛє ᴧ ǫυσᴛє ғʀσϻ ᴛʜє ϻєssᴧɢє
 ❍ /q r : ᴄʀєᴧᴛє ᴧ ǫυσᴛє ғʀσϻ ᴛʜє ϻєssᴧɢє ᴡɪᴛʜ ʀєᴘʟʏ
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-    HELP_13 = '''```
+    @property
+    def HELP_13(cls):
+        return f'''```
 ❖ ᴛʀυᴛʜ ᴧηᴅ ᴅᴧʀє ❖```
 
 **❖ ᴛʀυᴛʜ ᴧηᴅ ᴅᴧʀє ᴄσϻϻᴧηᴅ
@@ -184,22 +198,12 @@ class Helper(object):
 ❍ /truth : sєηᴅs ᴧ ʀᴧηᴅσϻ ᴛʀυᴛʜ sᴛʀɪηɢ
 ❍ /dare : sєηᴅs ᴧ ʀᴧηᴅσϻ ᴅᴧʀє sᴛʀɪηɢ
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-
-#------------------------------------------------------------------------------------------------------------------------
-# MANAGEMENT | MANAGEMENT | MANAGEMENT | MANAGEMENT | MANAGEMENT | MANAGEMENT | MANAGEMENT | MANAGEMENT | MANAGEMENT | 
-#------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-    HELP_14 = '''```
+    @property
+    def HELP_14(cls):
+        return f'''```
 ❖ ᴧᴠᴧɪʟᴧʙʟє ᴄσϻϻᴧηᴅs ꜰσʀ ᴧᴄᴛɪση```
 **❖ 𝖠𝖣𝖬𝖨𝖭𝖲 𝖮𝖭𝖫𝖸 :**
 
@@ -229,20 +233,23 @@ class Helper(object):
 ᴛʜɪs ᴄσϻϻᴧηᴅ ᴡɪʟʟ ᴡσʀᴋ σηʟʏ ɪғ ʏσυ ɢɪᴠє ʙᴧη ʀɪɢʜᴛs ᴛσ ᴛʜє ʙσᴛ ᴡɪᴛʜ ᴧᴅϻɪη```
 
 
-**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-    HELP_15 = '''```
+    @property
+    def HELP_15(cls):
+        return f'''```
 ❖ ᴋɪᴄᴋs ᴄσϻϻᴧηᴅꜱ ❖```
 
 **❍ /kick <userhandle> : ᴋɪᴄᴋs ᴧ υsєʀ συᴛ σғ ᴛʜє ɢʀσυᴘ, (ᴠɪᴧ ʜᴧηᴅʟє, σʀ ʀєᴘʟʏ)
 ❍ /kickme: ᴋɪᴄᴋs ᴛʜє υsєʀ ᴡʜσ ɪssυєᴅ ᴛʜє ᴄσϻϻᴧηᴅ
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-    HELP_16 = '''```
+    @property
+    def HELP_16(cls):
+        return f'''```
 ❖ ϻυᴛє ᴄσϻϻᴧηᴅꜱ ❖```
 
 **❖ ᴧᴠᴧɪʟᴧʙʟє ᴄσϻϻᴧηᴅs ꜰσʀ ϻυᴛє :
@@ -255,11 +262,12 @@ class Helper(object):
 ```
 ᴛʜɪs ᴄσϻϻᴧηᴅ ᴡɪʟʟ ᴡσʀᴋ σηʟʏ ɪғ ʏσυ ɢɪᴠє ʙᴧη ʀɪɢʜᴛs ᴛσ ᴛʜє ʙσᴛ ᴡɪᴛʜ ᴧᴅϻɪη```
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-    HELP_17 = '''```
+    @property
+    def HELP_17(cls):
+        return f'''```
 ❖ ᴛʜєsє ᴧʀє ᴛʜє ᴧᴠᴧɪʟᴧʙʟє ɢʀσυᴘ ϻᴧηᴧɢєϻєηᴛ ᴄσϻϻᴧηᴅs```
 **❖ 𝖠𝖣𝖬𝖨𝖭𝖲 𝖮𝖭𝖫𝖸 :**
 
@@ -285,21 +293,23 @@ class Helper(object):
 ❍ /unbanall ➠ ᴜηʙᴧη ᴧʟʟ ʙᴧη ϻєϻʙєʀs
 ❍ /unpinall ➠ ᴜηᴘɪη ᴧʟʟ ᴘɪη ᴍєssᴧɢᴇ**
 
-**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-    HELP_18 = '''```
+    @property
+    def HELP_18(cls):
+        return f'''```
 ❖ sᴛᴧғғ|ʙσᴛs ᴄσϻϻᴧηᴅꜱ ❖```
 
 **❍ /staff ➠ ᴅɪsᴘʟᴧʏs ᴛʜє ʟɪsᴛ σғ sᴛᴧғғ ϻєϻʙєʀs
 ❍ /bots ➠ ᴅɪsᴘʟᴧʏs ᴛʜє ʟɪsᴛ σғ ʙσᴛs ɪη ᴛʜє ɢʀσυᴘ
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-    HELP_19 = '''```
+    @property
+    def HELP_19(cls):
+        return f'''```
 ❖ ɢʀσυᴘ sєᴛ υᴘ ᴄσϻϻᴧηᴅꜱ ❖```
 
 **❍ /settitle ➠ sєᴛs ᴛʜє ᴛɪᴛʟє σғ ᴛʜє ɢʀσυᴘ
@@ -307,22 +317,23 @@ class Helper(object):
 ❍ /setphoto ➠ sєᴛs ᴛʜє ɢʀσυᴘ ᴘʜσᴛσ
 ❍ /removephoto ➠ ʀєϻσᴠєs ᴛʜє ɢʀσυᴘ ᴘʜσᴛσ
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-
-    HELP_20 = '''```
+    @property
+    def HELP_20(cls):
+        return f'''```
 ❖ ɢʀσυᴘ ᴄσϻϻᴧηᴅꜱ ❖```
 
 **❍ /zombies ➠ ʀєϻσᴠєs ᴧᴄᴄ ᴅєʟєᴛєᴅ ϻєϻʙєʀs ғʀσϻ ᴛʜє ɢʀσυᴘ
 
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-    HELP_21 = '''```
+    @property
+    def HELP_21(cls):
+        return f'''```
 ❖ ɢᴧϻє ᴘʟᴧʏ ❖```
 **❖ ʜєʀє ᴧʀє sσϻє ϻɪηɪ ɢᴧϻєs :
 
@@ -333,56 +344,68 @@ class Helper(object):
 ❍ /basket [ʙᴧsᴋєᴛʙᴧʟʟ ɢᴧϻє]
 ❍ /football [ғσσᴛʙᴧʟʟ ɢᴧϻє]
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-    HELP_22 = '''```
+    @property
+    def HELP_22(cls):
+        return f'''```
 ❖ ɪϻᴘσsᴛєʀ ❖```
 **ʜєʀє ɪs ᴛʜє ʜєʟᴘ ғσʀ ᴛʜє ɪϻᴘσsᴛєʀ ϻσᴅυʟє:
 
 ❍ /imposter on
 ❍ /imposter off
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-    HELP_23 = '''```
+    @property
+    def HELP_23(cls):
+        return f'''```
 ❖ sᴧηɢ ϻᴧᴛᴧ ᴄσϻϻᴧηᴅ ❖```
 **❍ /sg ➠ υsєʀ ηᴧϻє ᴧηᴅ υsєʀηᴧϻє ʜɪsᴛσʀʏ
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-    HELP_24 = '''```
+    @property
+    def HELP_24(cls):
+        return f'''```
 ❖ ᴛʀᴧηsʟᴧᴛєs ❖```
 **❍ /tr ➠ ᴄᴧη ᴛʀᴧηꜱʟᴧᴛє ϻυʟᴛɪᴘʟє ʟᴧηɢυᴧɢєs
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-    HELP_25 = '''```
+    @property
+    def HELP_25(cls):
+        return f'''```
 ❖ ɢɪᴛʜᴜʙ ᴄσϻϻᴧηᴅꜱ ❖```
 **❍ /git ➠ ғɪηᴅ ʀєᴘᴏ ɢɪᴛ ᴜsєʀηᴧϻє
 ❍ /allrepo ➠ sєє ᴧʟʟ ʀєᴘᴏ ᴛʜʀσᴜɢʜ ɢɪᴛ ᴜsєʀηᴧϻє**
 
 `єxᴧϻᴘʟє : /git ABHIPAPA`
 
-**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+**❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
 
-
-    HELP_26 = '''```
+    @property
+    def HELP_26(cls):
+        return f'''```
 ❖ ᴛєʟєɢʀᴧᴘʜ ❖```
 **ᴄʀєᴧᴛє ᴧ ᴛєʟєɢʀᴧᴘʜ ʟɪηᴋ ᴧηʏ ϻєᴅɪᴧ!
 
 ❍ /tgm [ʀєᴘʟʏ ᴛσ ᴧηʏ ϻєᴅɪᴧ]
 ❍ /tgt [ʀєᴘʟʏ ᴛσ ᴧηʏ ϻєᴅɪᴧ]
 
-❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)**
+❖ 𝐏ᴏᴡᴇʀᴇᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})**
 '''
-    HELP_PROMOTION = '''
+
+    @property
+    def HELP_PROMOTION(cls):
+        owner = config.OWNER_USERNAME.lstrip("@") if getattr(config, "OWNER_USERNAME", None) else ""
+        owner_link = f"https://t.me/{owner}" if owner else config.SUPPORT_CHAT
+        return f'''
 **───────────────────────
 ㅤ❖ ᴘᴧɪᴅ ᴘʀσϻσᴛɪση ᴧᴠᴧɪʟᴧʙʟє ❖
 ───────────────────────
@@ -397,32 +420,34 @@ class Helper(object):
 ───────────────────────
 ● ʙєsᴛ ᴧηᴅ ᴄʜєᴧᴘ ɪη ᴛєʟєɢʀᴧϻ 400-500+ ϻєϻʙєʀs ɪη σηє ᴘʀσϻσᴛɪση ɢυʀᴧηᴛєє...
 ───────────────────────
-❍ ᴄσηᴛᴧᴄᴛ - [- 𝑨𝑳𝑶𝑵𝑬 !!](https://t.me/II_ALONE_BOY_Il)
+❍ ᴄσηᴛᴧᴄᴛ - [- 𝑶𝑾𝑵𝑬𝑅 !!]({owner_link})
 ───────────────────────**
 '''
-    HELP_ABOUT = '''
-**───────────────────────
- ᴡєʟᴄσϻє ᴛσ ˹[𝙈𝘼𝙃𝙄 𝙓 𝙈𝙐𝙎𝙄𝘾](https://t.me/II_MUSIC_BOT_UPDATE_II)˼ ʙσᴛ sᴛᴧᴛυs 
-───────────────────────
-       ❖ │ ʀєᴧʟ ᴛɪϻє ʙσᴛ's sᴛᴧᴛυs │❖
-───────────────────────
-╭⎋ [𝙈𝘼𝙃𝙄 𝙓 𝙈𝙐𝙎𝙄𝘾](https://t.me/II_SHAYRI_KI_DUNIYA_II) : ᴧʟɪᴠє 
-╰⊚ υᴘᴛɪϻє : 12ʜ:58ϻ:20s | ᴄᴘυ : 5.0% | υsᴧɢє : 24 | ᴧssɪsᴛᴧηᴛs : 02
-       
-╭⎋ [𝙈𝘼𝙃𝙄 𝙓 𝙈𝙐𝙎𝙄𝘾](https://t.me/II_SHAYRI_KI_DUNIYA_II) : ᴧʟɪᴠє 
-╰⊚ υᴘᴛɪϻє : 12ʜ:58ϻ:20s | ᴄᴘυ : 5.0% | υsᴧɢє : 24 | ᴧssɪsᴛᴧηᴛs : 02
 
-╭⎋ [𝙈𝘼𝙃𝙄 𝙓 𝙈𝙐𝙎𝙄𝘾](https://t.me/II_SHAYRI_KI_DUNIYA_II) : ᴧʟɪᴠє 
+    @property
+    def HELP_ABOUT(cls):
+        bot_name = getattr(config, "BOT_NAME", "Music Bot")
+        return f'''
+**───────────────────────
+ ᴡєʟᴄσϻє ᴛσ ˹[{bot_name}]({config.SUPPORT_CHANNEL})˼ ʙσᴛ sᴛᴧᴛυs
+───────────────────────
+      ❖ │ ʀєᴧʟ ᴛɪϻє ʙσᴛ's sᴛᴧᴛυs │❖
+───────────────────────
+╭⎋ [{bot_name}]({config.SUPPORT_CHANNEL}) : ᴧʟɪᴠє
 ╰⊚ υᴘᴛɪϻє : 12ʜ:58ϻ:20s | ᴄᴘυ : 5.0% | υsᴧɢє : 24 | ᴧssɪsᴛᴧηᴛs : 02
 ───────────────────────
-⊚ ʙσᴛ sᴛᴧᴛυs ᴧηᴅ ϻσʀє ʙσᴛs - [ᴄʟɪᴄᴋ ʜєʀє](https://t.me/II_MUSIC_BOT_UPDATE_II)
+⊚ ʙσᴛ sᴛᴧᴛυs ᴧηᴅ ϻσʀє ʙσᴛs - [ᴄʟɪᴄᴋ ʜєʀє]({config.SUPPORT_CHANNEL})
 ───────────────────────
-⊚ ʟᴧsᴛ ᴄʜєᴄᴋєᴅ ση : ᴅᴧᴛє : 09 ᴀᴘʀɪʟ 2026  
-───────────────────────
-❍ 𝐏ᴏᴡєʀєᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)
+❍ 𝐏ᴏᴡєʀєᴅ 𝖡ʏ » [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})
 ───────────────────────**
 '''
-    HELP_ALLBOT = '''
+
+    @property
+    def HELP_ALLBOT(cls):
+        owner = config.OWNER_USERNAME.lstrip("@") if getattr(config, "OWNER_USERNAME", None) else ""
+        owner_link = f"https://t.me/{owner}" if owner else config.SUPPORT_CHAT
+        bot_name = getattr(config, "BOT_NAME", "Music Bot")
+        return f'''
 **───────────────────────
 ❖ ᴧ ϻᴜsɪᴄ + ϻᴧηᴧɢєϻєηᴛ ʙσᴛ ғσʀ ᴛєʟєɢʀᴧϻ ɢʀσᴜᴘs / ᴄʜᴧηηєʟs
 ───────────────────────
@@ -431,53 +456,41 @@ class Helper(object):
 ───────────────────────
 ● ηᴏ ʟᴀɢ ɪssᴜєs ηᴏ ᴧᴅs ηᴏ ʙᴜɢs.
 ● sᴜᴘᴘᴏʀᴛ ᴧʟʟ ᴛɪϻє sᴛᴧʏ ᴡɪᴛʜ ᴜs.
-● ᴇηᴊᴏʏ ғєєʟ ғʀєє ϻᴜsɪᴄ ᴡɪᴛʜ ˹ 𝑴𝒖𝒔𝒊𝒄˼
+● ᴇηᴊᴏʏ ғєєʟ ғʀєє ϻᴜsɪᴄ ᴡɪᴛʜ ˹ {bot_name}˼
 ● ᴧᴅᴅ ϻє ηᴏᴡ ʙᴧʙʏ ɪɴ ʏᴏᴜʀ ɢʀσᴜᴘs.
 ───────────────────────
-❖ υᴘᴅᴧᴛєs ᴄʜᴧηηєʟ ➥ [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼](https://t.me/II_MUSIC_BOT_UPDATE_II)
-❖ sυᴘᴘσʀᴛ ᴄʜᴧᴛ ➥ [- 𝑨𝑳𝑶𝑵𝑬 !!](https://t.me/Il_ALONE_BOY_II)
-❖ ʙᴏᴛ σᴡηєʀ ➥ [- 𝑨𝑳𝑶𝑵𝑬!!](https://t.me/Il_ALONE_BOY_II)
-❖ ʀєᴘσ ʟɪηᴋ ➥ [ᴄʟɪᴄᴋ-ʜєʀє](https://t.me/+tkKtEN7dPFpmMjU1)
+❖ υᴘᴅᴧᴛєs ᴄʜᴧηηєʟ ➥ [˹ ғᴀɪʀʏᴛᴀʟᴇ ꭙ ɴᴇᴛᴡᴏʀᴋ ˼]({config.SUPPORT_CHANNEL})
+❖ sυᴘᴘσʀᴛ ᴄʜᴧᴛ ➥ [sυᴘᴘσʀᴛ]({config.SUPPORT_CHAT})
+❖ ʙᴏᴛ σᴡηєʀ ➥ [σᴡηєʀ]({owner_link})
+❖ ʀєᴘσ ʟɪηᴋ ➥ [ᴄʟɪᴄᴋ-ʜєʀє]({config.UPSTREAM_REPO})
 ───────────────────────
-❖ ᴄʟɪᴄᴋ ση ᴛʜє ʜєʟᴩ ʙυᴛᴛση ᴛσ ɢєᴛ ɪηғσ
+❖ ᴄʟɪᴄᴋ ση ᴛʜє ʜєʟᴘ ʙυᴛᴛση ᴛσ ɢєᴛ ɪηғσ
    ᴧʙσυᴛ ϻʏ ϻσᴅυʟєs ᴧηᴅ ᴄσϻϻᴧηᴅs...!!
 ───────────────────────**
 '''
 
-#------------------------------------------------------------------------------------------------------------------------
-#------------------------------------------------------------------------------------------------------------------------
-#------------------------------------------------------------------------------------------------------------------------
 
-
-    
+class Helper(metaclass=HelperMeta):
     fullpromote = {
-    'can_change_info': True,
-    'can_post_messages': True,
-    'can_edit_messages': True,
-    'can_delete_messages': True,
-    'can_invite_users': True,
-    'can_restrict_members': True,
-    'can_pin_messages': True,
-    'can_promote_members': True,
-    'can_manage_chat': True,
+        'can_change_info': True,
+        'can_post_messages': True,
+        'can_edit_messages': True,
+        'can_delete_messages': True,
+        'can_invite_users': True,
+        'can_restrict_members': True,
+        'can_pin_messages': True,
+        'can_promote_members': True,
+        'can_manage_chat': True,
     }
 
-    
     promoteuser = {
-    'can_change_info': False,
-    'can_post_messages': True,
-    'can_edit_messages': True,
-    'can_delete_messages': False,
-    'can_invite_users': True,
-    'can_restrict_members': False,
-    'can_pin_messages': False,
-    'can_promote_members': False,
-    'can_manage_chat': True,
+        'can_change_info': False,
+        'can_post_messages': True,
+        'can_edit_messages': True,
+        'can_delete_messages': False,
+        'can_invite_users': True,
+        'can_restrict_members': False,
+        'can_pin_messages': False,
+        'can_promote_members': False,
+        'can_manage_chat': True,
     }
-
-
-
-
-#------------------------------------------------------------------------------------------------------------------------
-#------------------------------------------------------------------------------------------------------------------------
-#------------------------------------------------------------------------------------------------------------------------

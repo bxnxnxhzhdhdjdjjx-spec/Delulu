@@ -5,39 +5,44 @@ from pyrogram import filters
 
 load_dotenv()
 
+# Basic Bot & Owner Configs
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
-
 BOT_TOKEN = getenv("BOT_TOKEN")
-OWNER_USERNAME = getenv("OWNER_USERNAME","II_ALONE_BOY_Il")
-BOT_USERNAME = getenv("BOT_USERNAME" , "MAHI_MUSICSBOT")
-BOT_NAME = getenv("BOT_NAME" , "sejal 𝑴𝒖𝒔𝒊𝒄 𝑩𝒐𝒕")
-ASSUSERNAME = getenv("ASSUSERNAME" , "II_ALONE_BOY_Il")
+OWNER_USERNAME = getenv("OWNER_USERNAME", "II_ALONE_BOY_Il")
+BOT_USERNAME = getenv("BOT_USERNAME", "MAHI_MUSICSBOT")
+BOT_NAME = getenv("BOT_NAME", "sejal 𝑴𝒖𝒔𝒊𝒄 𝑩𝒐𝒕")
+ASSUSERNAME = getenv("ASSUSERNAME", "II_ALONE_BOY_Il")
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
 LOGGER_ID = int(getenv("LOGGER_ID", 0))
 OWNER_ID = int(getenv("OWNER_ID", 7915069238))
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
-UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/spicycodez/DeluluMusic",)
+UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/spicycodez/DeluluMusic")
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
+# API Endpoints
 SAAVN_API_URL = getenv("SAAVN_API_URL", "https://jiosaavn-a.kvinit6421.workers.dev/api/search/songs")
 JIOSAAVN_API_URL = getenv("JIOSAAVN_API_URL", "https://jiosaavn-a.kvinit6421.workers.dev/api/search/songs")
-API_URL = getenv("API_URL", 'https://pytdbotapi.thequickearn.xyz')
-VIDEO_API_URL = getenv("VIDEO_API_URL", 'https://api.video.thequickearn.xyz')
-SHRUTI_API_URL = getenv("SHRUTI_API_URL", 'https://api.shrutibots.site')
-SHRUTI_API_KEY = getenv("SHRUTI_API_KEY", 'ShrutiBotsjyOuNr6aH5inWY06YDYJ')
+API_URL = getenv("API_URL", "https://pytdbotapi.thequickearn.xyz")
+VIDEO_API_URL = getenv("VIDEO_API_URL", "https://api.video.thequickearn.xyz")
+SHRUTI_API_URL = getenv("SHRUTI_API_URL", "https://api.shrutibots.site")
+SHRUTI_API_KEY = getenv("SHRUTI_API_KEY", "ShrutiBotsjyOuNr6aH5inWY06YDYJ")
 COBALT_API_URL = getenv("COBALT_API_URL", None)
 SELF_HOSTED_COBALT_URL = getenv("SELF_HOSTED_COBALT_URL", getenv("COBALT_API_URL", None))
 POT_PROVIDER_URL = getenv("POT_PROVIDER_URL", "http://127.0.0.1:4416")
-YTPROXY_URL = getenv("YTPROXY_URL", 'https://tgapi.xbitcode.com')
+YTPROXY_URL = getenv("YTPROXY_URL", "https://tgapi.xbitcode.com")
 YT_API_KEY = getenv("YT_API_KEY", None)
 
+# Links & Community Channels
 PRIVACY_LINK = getenv("PRIVACY_LINK", "")
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/II_SHAYRI_KI_DUNIYA_II")
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/+8u7DHj1SZi9mYjll")
+MUST_JOIN = getenv("MUST_JOIN", "kriti_bot_update")
+
+# Bot Limits & Timeouts
 AUTO_LEAVING_ASSISTANT = getenv("AUTO_LEAVING_ASSISTANT", "False")
 AUTO_LEAVE_ASSISTANT_TIME = int(getenv("ASSISTANT_LEAVE_TIME", "9000"))
 SONG_DOWNLOAD_DURATION = int(getenv("SONG_DOWNLOAD_DURATION", "9999999"))
@@ -47,6 +52,8 @@ SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", "709e1a2969664491b582008
 PLAYLIST_FETCH_LIMIT = int(getenv("PLAYLIST_FETCH_LIMIT", 25))
 TG_AUDIO_FILESIZE_LIMIT = int(getenv("TG_AUDIO_FILESIZE_LIMIT", "5242880000"))
 TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", "5242880000"))
+
+# String Sessions
 STRING1 = getenv("STRING_SESSION", None)
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
@@ -54,28 +61,39 @@ STRING4 = getenv("STRING_SESSION4", None)
 STRING5 = getenv("STRING_SESSION5", None)
 STRING6 = getenv("STRING_SESSION6", None)
 STRING7 = getenv("STRING_SESSION7", None)
+
 BANNED_USERS = filters.user()
 adminlist = {}
 lyrical = {}
 votemode = {}
 autoclean = []
 confirmer = {}
+
+# Images & Media URLs
 START_IMG_URL = getenv("START_IMG_URL", "https://litter.catbox.moe/xr9jf82b2umeke7j.jpg")
 PING_IMG_URL = getenv("PING_IMG_URL", "https://litter.catbox.moe/xyedznhk80hmial2.mp4")
-PLAYLIST_IMG_URL = "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg"
-STATS_IMG_URL = "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg"
-TELEGRAM_AUDIO_URL = "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg"
-TELEGRAM_VIDEO_URL = "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg"
-STREAM_IMG_URL = "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg"
-SOUNCLOUD_IMG_URL = "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg"
-YOUTUBE_IMG_URL = "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg"
+PLAYLIST_IMG_URL = getenv("PLAYLIST_IMG_URL", "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg")
+STATS_IMG_URL = getenv("STATS_IMG_URL", "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg")
+TELEGRAM_AUDIO_URL = getenv("TELEGRAM_AUDIO_URL", "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg")
+TELEGRAM_VIDEO_URL = getenv("TELEGRAM_VIDEO_URL", "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg")
+STREAM_IMG_URL = getenv("STREAM_IMG_URL", "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg")
+SOUNCLOUD_IMG_URL = getenv("SOUNCLOUD_IMG_URL", "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg")
+YOUTUBE_IMG_URL = getenv("YOUTUBE_IMG_URL", "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg")
+SPOTIFY_ARTIST_IMG_URL = getenv("SPOTIFY_ARTIST_IMG_URL", "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg")
+SPOTIFY_ALBUM_IMG_URL = getenv("SPOTIFY_ALBUM_IMG_URL", "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg")
+SPOTIFY_PLAYLIST_IMG_URL = getenv("SPOTIFY_PLAYLIST_IMG_URL", "https://graph.org/file/4fb9a698630aa5b47be05-060979d72b7752fc8f.jpg")
+MUST_JOIN_IMG = getenv("MUST_JOIN_IMG", "https://files.catbox.moe/fu6jk3.jpg")
+LOG_IMG_URL = getenv("LOG_IMG_URL", "https://files.catbox.moe/tdj8he.jpg")
+REPO_IMG_URL = getenv("REPO_IMG_URL", "https://litter.catbox.moe/xr9jf82b2umeke7j.jpg")
+
+
 def time_to_seconds(time):
     stringt = str(time)
     return sum(int(x) * 60**i for i, x in enumerate(reversed(stringt.split(":"))))
+
+
 DURATION_LIMIT = int(time_to_seconds(f"{DURATION_LIMIT_MIN}:00"))
+
 if SUPPORT_CHANNEL:
     if not re.match("(?:http|https)://", SUPPORT_CHANNEL):
         raise SystemExit(

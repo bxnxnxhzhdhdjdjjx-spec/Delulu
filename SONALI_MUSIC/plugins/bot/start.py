@@ -22,38 +22,48 @@ from SONALI_MUSIC.utils.formatters import get_readable_time
 from SONALI_MUSIC.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
 from strings import get_string
- 
-NEXIO = [
-          "https://litter.catbox.moe/vtsad2y91ytmincf.jpg",
-          "https://litter.catbox.moe/4w9ecqcg6gzijzwt.jpg",
-          "https://litter.catbox.moe/ql33xyx1bawu1c2v.jpg",
-          "https://litter.catbox.moe/wvszrn7kqj0lrme6.jpg",
-          "https://litter.catbox.moe/oc71pbepf8cxkk4r.jpg",
-          "https://litter.catbox.moe/00ty0hx8cbrs2299.jpg",
-          "https://litter.catbox.moe/pdn1i4ze2hl1u6gf.jpg",
-          "https://litter.catbox.moe/qcgtbz6keobcc8iz.jpg",
+
+DEFAULT_NEXIO = [
+    "https://litter.catbox.moe/vtsad2y91ytmincf.jpg",
+    "https://litter.catbox.moe/4w9ecqcg6gzijzwt.jpg",
+    "https://litter.catbox.moe/ql33xyx1bawu1c2v.jpg",
+    "https://litter.catbox.moe/wvszrn7kqj0lrme6.jpg",
+    "https://litter.catbox.moe/oc71pbepf8cxkk4r.jpg",
+    "https://litter.catbox.moe/00ty0hx8cbrs2299.jpg",
+    "https://litter.catbox.moe/pdn1i4ze2hl1u6gf.jpg",
+    "https://litter.catbox.moe/qcgtbz6keobcc8iz.jpg",
 ]
- 
+
+
+def get_start_images():
+    if getattr(config, "START_IMG_URL", None):
+        urls = [u.strip() for u in str(config.START_IMG_URL).split(",") if u.strip()]
+        if urls:
+            return urls
+    return DEFAULT_NEXIO
+
+
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
 @LanguageStart
 async def start_pm(client, message: Message, _):
     await add_served_user(message.from_user.id)
+    images = get_start_images()
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
             keyboard = help_pannel(_)
             return await message.reply_photo(
-                random.choice(NEXIO),
+                random.choice(images),
                 caption=_["help_1"].format(config.SUPPORT_CHAT),
                 reply_markup=keyboard,
-                has_spoiler=True
+                has_spoiler=True,
             )
         if name[0:3] == "sud":
             await sudoers_list(client=client, message=message, _=_)
             if await is_on_off(2):
                 return await app.send_message(
                     chat_id=config.LOGGER_ID,
-                    text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <b>sᴜᴅᴏʟɪsᴛ</b>.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
+                    text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <b>sᴜᴅᴏʟɪsᴛ</b>.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b><ctrl42>username :</b> @{message.from_user.username}",
                 )
             return
         if name[0:3] == "inf":
@@ -101,7 +111,7 @@ async def start_pm(client, message: Message, _):
             if await is_on_off(2):
                 return await app.send_message(
                     chat_id=config.LOGGER_ID,
-                    text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <b>ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</b>.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
+                    text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <b>ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</b>.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b><ctrl42>username :</b> @{message.from_user.username}",
                 )
     else:
         out = private_panel(_)
@@ -121,9 +131,9 @@ async def start_pm(client, message: Message, _):
         await baby.edit_text(f"**__ʙσᴛ sᴛᴧʀᴛєᴅ....💤__**")
         await baby.edit_text(f"**__ʙσᴛ sᴛᴧʀᴛєᴅ.....💤__**")
         await baby.delete()
-        
+
         await message.reply_photo(
-            random.choice(NEXIO),
+            random.choice(images),
             caption=_["start_2"].format(message.from_user.mention, app.mention),
             reply_markup=InlineKeyboardMarkup(out),
             has_spoiler=True,
@@ -133,20 +143,23 @@ async def start_pm(client, message: Message, _):
                 chat_id=config.LOGGER_ID,
                 text=f"{message.from_user.mention} 🚀 Just Started the Bot!.\n\n<b>🆔 Telegram ID :</b> <code>{message.from_user.id}</code>\n<b>🔗 Username:  :</b> @{message.from_user.username}",
             )
- 
+
+
 @app.on_message(filters.command(["start"]) & filters.group & ~BANNED_USERS)
 @LanguageStart
 async def start_gp(client, message: Message, _):
     out = start_panel(_)
     uptime = int(time.time() - _boot_)
+    images = get_start_images()
     await message.reply_photo(
-        random.choice(NEXIO),
+        random.choice(images),
         caption=_["start_1"].format(app.mention, get_readable_time(uptime)),
         reply_markup=InlineKeyboardMarkup(out),
         has_spoiler=True,
     )
     return await add_served_chat(message.chat.id)
- 
+
+
 @app.on_message(filters.new_chat_members, group=-1)
 async def welcome(client, message: Message):
     for member in message.new_chat_members:
@@ -172,10 +185,11 @@ async def welcome(client, message: Message):
                         disable_web_page_preview=True,
                     )
                     return await app.leave_chat(message.chat.id)
- 
+
                 out = start_panel(_)
+                images = get_start_images()
                 await message.reply_photo(
-                    random.choice(NEXIO),
+                    random.choice(images),
                     caption=_["start_3"].format(
                         message.from_user.mention,
                         app.mention,
