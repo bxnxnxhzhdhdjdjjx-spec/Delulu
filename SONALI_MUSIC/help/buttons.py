@@ -1,8 +1,6 @@
-from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-from pyrogram import Client, filters, enums 
-
+from pyrogram.types import InlineKeyboardButton
 import config
-from SONALI_MUSIC import app
+
 
 class BUTTONS(object):
     BBUTTON = [
@@ -38,11 +36,6 @@ class BUTTONS(object):
         ]
     ]
 
-    
-
-
-
-    
     ALPHABUTTON = [
         [
             InlineKeyboardButton("ᴧɪ | ᴄʜᴧᴛɢᴘᴛ", callback_data="TOOL_BACK HELP_01"),
@@ -68,11 +61,12 @@ class BUTTONS(object):
             InlineKeyboardButton("ᴛ-ᴅ", callback_data="TOOL_BACK HELP_13"),
         ],
         [   
-            InlineKeyboardButton("⌯ ʙᴧᴄᴋ ⌯", callback_data=f"MAIN_CP"),]
+            InlineKeyboardButton("⌯ ʙᴧᴄᴋ ⌯", callback_data=f"MAIN_CP"),
         ]
-    
+    ]
+
     MBUTTON = [
-                [
+        [
             InlineKeyboardButton("єxᴛʀᴧ", callback_data="MANAGEMENT_BACK HELP_25"),
         ],
         [
@@ -98,28 +92,33 @@ class BUTTONS(object):
         [
             InlineKeyboardButton("⌯ ʙᴧᴄᴋ ⌯", callback_data=f"MAIN_CP"), 
         ]
+    ]
+
+    @property
+    def PBUTTON(self):
+        owner = config.OWNER_USERNAME.lstrip("@") if getattr(config, "OWNER_USERNAME", None) else ""
+        owner_url = f"https://t.me/{owner}" if owner else config.SUPPORT_CHAT
+        return [
+            [
+                InlineKeyboardButton("ㅤ- 𝑶𝑾𝑵𝑬𝑅 ! ", url=owner_url)
+            ],
+            [
+                InlineKeyboardButton("⌯ ʙᴧᴄᴋ ⌯", callback_data="MAIN_CP"),
+            ]
         ]
-    PBUTTON = [
-        [
-            InlineKeyboardButton("ㅤ- 𝑨𝑳𝑶𝑵𝑬 ! ", url="https://t.me/II_ALONE_BOY_Il")
-        ],
-        [
-            InlineKeyboardButton("⌯ ʙᴧᴄᴋ ⌯", callback_data="MAIN_CP"),
-            
+
+    @property
+    def ABUTTON(self):
+        return [
+            [
+                InlineKeyboardButton("⌯ sυᴘᴘσʀᴛ ⌯", url=config.SUPPORT_CHAT),
+                InlineKeyboardButton("⌯ υᴘᴅᴧᴛєs ⌯", url=config.SUPPORT_CHANNEL),
+            ],
+            [
+                InlineKeyboardButton("⌯ ʙᴧᴄᴋ ⌯", callback_data="settingsback_helper"),
+            ]
         ]
-        ]
-    
-    ABUTTON = [
-        [
-            InlineKeyboardButton("⌯ sυᴘᴘσʀᴛ ⌯", url="https://t.me/Il_ALONE_BOY_II"),
-            InlineKeyboardButton("⌯ υᴘᴅᴧᴛєs ⌯", url="https://t.me/II_MUSIC_BOT_UPDATE_II"),
-        ],
-        [
-            InlineKeyboardButton("⌯ ʙᴧᴄᴋ ⌯", callback_data="settingsback_helper"),
-            
-        ]
-        ]
-    
+
     SBUTTON = [
         [
             InlineKeyboardButton("⌯ ϻᴜѕɪᴄ ⌯", callback_data="settings_back_helper"),
@@ -131,9 +130,5 @@ class BUTTONS(object):
         ],
         [
             InlineKeyboardButton("⌯ ʙᴧᴄᴋ ᴛσ ʜσϻє ⌯", callback_data="settingsback_helper"),
-            
         ]
-        ]
-
-
-
+    ]
